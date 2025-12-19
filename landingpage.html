@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochiva Signature Beauty</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #fffafc; color: #333; }
+
+    /* HERO */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+        url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex; justify-content: center; align-items: center;
+      flex-direction: column; color: white; text-align: center; padding: 0 20px;
+    }
+    header h1 { font-size: 3rem; font-family: 'Playfair Display', serif; margin-bottom: 10px; color: #f9c6d2; }
+    header p { font-size: 1.2rem; margin-bottom: 20px; }
+    header a { text-decoration: none; background: #f9c6d2; color: #333; padding: 12px 25px; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+    header a:hover { background: #333; color: #f9c6d2; }
+
+    section { padding: 60px 5%; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #b43f63; margin-bottom: 20px; text-align: center; }
+
+    /* ABOUT */
+    .about p { max-width: 700px; margin: auto; line-height: 1.8; text-align: center; font-size: 1rem; padding: 0 15px; }
+
+    /* SERVICES */
+    .services ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .services li {
+      background: #fff; padding: 20px; border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px;
+      text-align: center; font-weight: bold; font-size: 0.95rem;
+    }
+
+    /* SLIDESHOW */
+    .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+    .mySlides { display: none; }
+    .slideshow-container img {
+      width: 100%; max-height: 500px; object-fit: cover;
+      border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer; position: absolute; top: 50%; width: auto;
+      margin-top: -22px; padding: 16px; color: white; font-weight: bold;
+      font-size: 18px; transition: 0.3s; border-radius: 0 3px 3px 0;
+      user-select: none; background: rgba(0,0,0,0.4);
+    }
+    .next { right: 0; border-radius: 3px 0 0 3px; }
+    .prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
+
+    /* Dots */
+    .dot-container { text-align: center; padding: 15px; }
+    .dot {
+      cursor: pointer; height: 12px; width: 12px; margin: 0 4px;
+      background-color: #bbb; border-radius: 50%; display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover { background-color: #b43f63; }
+
+    /* CONTACT + FORM */
+    .contact p, .contact form { text-align: center; margin: 10px 0; }
+    .contact input, .contact textarea {
+      width: 90%; max-width: 400px; padding: 10px;
+      margin: 10px auto; display: block; border: 1px solid #ccc;
+      border-radius: 8px; font-size: 0.95rem;
+    }
+    .contact button {
+      background: #b43f63; color: white; padding: 12px 25px;
+      border: none; border-radius: 30px; cursor: pointer;
+      transition: 0.3s; font-size: 1rem;
+    }
+    .contact button:hover { background: #f9c6d2; color: #333; }
+
+    footer { background: #b43f63; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .services li { width: 45%; }
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      .services li { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Ochival Signature Beauty</h1>
+    <p>Elegance. Style. Confidence.</p>
+    <a href="./aboutService.html">Book Now</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>At Ochiva Signature Beauty, we specialize in wigs, ladies’ hairstyles, and timeless beauty transformations. 
+    Our mission is to enhance your natural beauty and boost your confidence with every look.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Custom Wigs</li>
+      <li>Braids & Weaves</li>
+      <li>Bridal Styling</li>
+      <li>Hair Treatments</li>
+      <li>Makeup Services</li>
+    </ul>
+  </section>
+
+  <!-- GALLERY (Slideshow) -->
+  <section class="gallery" id="gallery">
+    <h2>Our Work</h2>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Style 1">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Style 2">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://images.pexels.com/photos/3762940/pexels-photo-3762940.jpeg" alt="Style 3">
+      </div>
+
+      <!-- Arrows -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +234 800 000 0000 <br> 📧 info@ochivabeauty.com <br> 📍 Lagos, Nigeria</p>
+
+    <!-- WhatsApp Button -->
+    <p><a href="https://wa.me/2347059274114" target="_blank" style="background:#25D366; color:white; padding:12px 25px; border-radius:30px; text-decoration:none;">Chat on WhatsApp</a></p>
+
+    <!-- Booking Form -->
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Service Needed" required>
+      <textarea rows="4" placeholder="Additional Details"></textarea>
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ochiva Signature Beauty. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }    
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+    // Auto slideshow
+    setInterval(() => { plusSlides(1); }, 4000);
+  </script>
+
+</body>
+</html>
