@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochiva Signature Beauty</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: #fff0f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-style: italic;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffe4f1;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ff69b4;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-out;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* About Section */
+    .about {
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Services Section */
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    .service-card h3 {
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      box-shadow: 0 0 12px #ff69b4;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .contact{
+    text-align:center;
+    padding:40px 20px;
+    background:#fff0f6;}
+    .contact h2{
+    color:#d63384;
+    margin-bottom:15px;
+    font-size:1.8rem;}
+    .contact p{
+    margin-bottom:20px;
+    font-size:1rem;}
+    .whatsapp-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#25d366;
+    color:white;
+    font-weight:bold;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:1.1rem;
+    transition:background 0.3s ease;
+  }
+    .whatsapp-btn:hover{
+    background:#1ebe57;}
+
+    footer{
+    background:#d63384;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+  }
+    footer p{
+    font-size:0.9rem;
+  }
+
+    @media(max-width:768px){
+      header h1{font-size:1.5rem;}
+      .services h2,.contact h2{font-size:1.5rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ochival Signature Beauty</h1>
+    <p>Where elegance meets perfection ✨</p>
+    <nav>
+       <a href="./index.html">Home</a>
+    <a href="./aboutService.html">About</a>
+    <a href="./service.html">Services</a>
+    <a href="./gallery1.html">Gallery</a>
+    <a href="./contactNEW.html">Contact</a>
+     <a href="./product2.html">Product</a>
+     <a href="./product.html">Market</a>
+     
+    </header>
+
+  <!-- Services Section -->
+  <section id="services" class="services fade-in">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3>Ventilation </h3>
+        <br>
+        <li>Closure</li>
+        <li>Frontal Ventilation</li>
+        <li>Single knot Ventilation</li>
+        <li>Split knot Ventilation</li>
+      </div>
+      <div class="service-card">
+        <h3>Braids</h3>
+        <p>Neat and stylish braids for every occasion.</p>
+        <br> <br>
+        <li>Bridal hair styling</li>
+        <li>Bridal hair installation</li>
+        <li>Nail fixing</li>
+        <li>Bridal makeup </li>
+      </div>
+      <div class="service-card">
+        <h3>Makeup</h3>
+        <p>Flawless makeup to make you glow at any event.</p>
+        <br>
+        <li>Bridal Makeup</li>
+        <li>Engagment Makeup</li>
+        <li>Photoshoot Makeup</li>
+        <li>Party Makeup</li>
+        <li>Gele/Head Scarfs</li>
+      </div>
+      <div class="service-card">
+        <h3>Wig maintainance <br>
+          Installation
+        </h3>
+        <p>Beautiful wig designs that match your unique style.</p>
+        <br>
+          <li>Wigbrevamp</li>
+          <li>Closure Filling</li>
+          <li>Closure/Frontal Repair</li>
+          <li>Wig Trimming</li>
+          <li>Wig Installation</li>
+          <li>Wig Styling</li>
+      </div>
+            <div class="service-card">
+        <h3>Wig maintainance <br>
+             Installation 2</h3>
+           <li>Wig Layering</li>
+          <li>Wigging Bundies</li>
+          <li>Rewigging Wigs (factory/machine/ <br>handwig/handwigs)</li>
+          <li>Wig Colouring</li>
+          <li>Glueless styling</li>
+      </div>
+      <div class="service-card">
+        <h3>Dread</h3>
+        <li>Starter dread</li>
+        <li>Dread cut</li>
+        <li>Dread maintainance</li>
+      </div>
+        <div class="service-card">
+        <h3>Hair Braiding</h3>
+        <li>Knotless brands</li>
+        <li>Box braids</li>
+        <li>Kinky styling</li>
+      </div>
+
+       <div class="service-card">
+        <h3>Brow Technology</h3>
+        <li>Nano Brows</li>
+        <li>Brow Lamination</li>
+        <li>Micro Shaping</li>
+        <li>Brow Shaping</li>
+        <li>Brow Pencil Drawing</li>
+      </div>
+      <div class="service-card">
+        <h3>Natural Hair Maintance</h3>
+        <li>Lice Treatment</li>
+        <li>Hair Wash</li>
+        <li>Dandruff Treatment</li>
+        <li>Natural Treatment Oil</li>
+      </div>
+      <div class="service-card">
+        <h3>PhotoShoot</h3>
+        <br><br>
+        <li>Out Door photography</li>
+        <li>Indoor photography</li>
+        <li>Photo Editing</li>
+      </div>
+
+      <div class="service-card">
+        <h3>Eye Lash Extensions</h3>
+        <p>Eye Lash Fixing <br>
+          (Single , Claster Lashes With Glue) </p>
+        <li>Doll Eyelash</li>
+        <li>Cat Eyelash</li>
+        <li>Maga Volume</li>
+        <li>Hybrial Eyelash</li>
+        <li>Volume Eyelash</li>
+        <li>Classic Eyelash</li>
+
+      </div>
+       <div class="service-card">
+        <h3>Massage</h3>
+        <br> <br>
+        <li>Full body massage</li>
+        <li>Back massage </li>
+        <li>Face massage</li>
+        <li>Leg massage</li>
+        <li>Head massage</li>
+        <li>Abdonen massage</li>
+        <li>Hand massage</li>
+        <li>Shoulder massage</li>
+        <li>Feet massage</li>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Book an Appointment</h2>
+    <p>We’d love to make you look beautiful! Contact us today:</p>
+    <a href="https://wa.me/2348012345678" class="whatsapp-btn" target="_blank">💬 Chat on WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Ochiva Signature Beauty | All Rights Reserved</p>
+  </footer>
+
+  <!-- Fade-in script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
