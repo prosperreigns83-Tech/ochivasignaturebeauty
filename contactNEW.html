@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Ochiva Signature Beauty</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* Header / Nav */
+    header {
+      background: #ff69b4;
+      color: #fff;
+      padding: 18px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header .brand { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.6px; }
+    header nav { margin-top: 8px; }
+    header nav a {
+      color: white; text-decoration: none; margin: 0 10px; font-weight: 600;
+      transition: color .2s;
+    }
+    header nav a:hover { color: #ffe4f1; }
+
+    /* Page wrapper */
+    .container { max-width: 980px; margin: 32px auto; padding: 0 16px; }
+
+    /* Contact intro */
+    .intro {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .intro h1 { color: #ff69b4; font-size: 1.8rem; margin-bottom: 8px; }
+    .intro p { color: #444; }
+
+    /* Info row */
+    .info-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 22px 0;
+    }
+    .info-card {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .info-card p { margin-top: 8px; color: #333; word-break: break-word; }
+    .info-card a { color: #ff69b4; text-decoration: none; font-weight: 600; }
+
+    /* Form area */
+    .form-wrap {
+      margin-top: 12px;
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    label { display:block; font-weight:600; margin: 10px 0 6px; color: #444; font-size:0.95rem; }
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e6d3df;
+      background: #fff;
+      font-size: 0.96rem;
+      color: #222;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff69b4;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(255,105,180,0.18); }
+
+    .btn.secondary {
+      background: #25d366; /* whatsapp green */
+    }
+
+    .small-note { font-size: 0.9rem; color: #666; margin-top: 8px; }
+
+    /* Success message */
+    .toast {
+      display:none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #eafff2;
+      color: #1c6b2b;
+      border: 1px solid rgba(28,107,43,0.12);
+    }
+
+    /* fade-in class */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 900ms cubic-bezier(.2,.9,.2,1); }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+
+    footer {
+      margin: 40px 0 20px;
+      text-align: center;
+      color: #666;
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 14px 12px; }
+      .intro h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Ochiva Signature Beauty</div>
+    <nav>
+      <a href="./landingpage.html">Home</a>
+    <a href="./About.html">About</a>
+    <a href="./ourService.html">Services</a>
+    <a href="./gallery1.html">Gallery</a>
+    <a href="./contact.html">Contact</a>
+     <a href="./product2.html">Product</a>
+     <a href="./product.html">Market</a>
+     
+  </header>
+
+  <main class="container">
+    <section class="intro fade-in">
+      <h1>Get in touch</h1>
+      <p>Have a question or want to book an appointment? Send us a message or start a WhatsApp chat — we’ll get back quickly.</p>
+    </section>
+
+    <section class="info-row fade-in">
+      <div class="info-card">
+        <strong>Phone</strong>
+        <p>+234 812 345 6789</p>
+      </div>
+
+      <div class="info-card">
+        <strong>WhatsApp</strong>
+        <p><a href="https://wa.me/2347059274114" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+
+      <div class="info-card">
+        <strong>Instagram</strong>
+        <p><a href="https://instagram.com/ochivasignature" target="_blank" rel="noopener">@ochivasignature</a></p>
+      </div>
+    </section>
+
+    <section class="form-wrap fade-in" aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title" style="color:#ff69b4; text-align:center; margin-bottom:8px;">Send a booking request</h2>
+
+      <form id="contactForm">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="E.g. Ada" required>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" placeholder="+234 81x xxx xxxx" required>
+
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="">-- Select a service --</option>
+          <option>Wig Installation</option>
+          <option>Braids</option>
+          <option>Makeup</option>
+          <option>Nails</option>
+          <option>Lashes</option>
+          <option>Other</option>
+        </select>
+
+        <label for="date">Preferred date (optional)</label>
+        <input id="date" name="date" type="text" placeholder="E.g. 2025-10-12">
+
+        <label for="message">Extra details</label>
+        <textarea id="message" name="message" placeholder="Tell us any special requests (color, length, event)"></textarea>
+
+        <div class="form-actions">
+          <!-- Email submit: opens user's email client (mailto) -->
+          <button type="submit" class="btn" id="sendEmailBtn">Send as Email</button>
+
+          <!-- WhatsApp submit: builds prefilled message and opens WhatsApp -->
+          <button type="button" class="btn secondary" id="sendWhatsBtn">Send via WhatsApp</button>
+
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </div>
+
+        <p class="small-note">Note: If you prefer, you can also click the WhatsApp button above to send this request directly to Ochiva.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Ochiva Signature Beauty — made with care.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Fade-in on scroll (same as Home/Gallery)
+    (function() {
+      const faders = document.querySelectorAll('.fade-in');
+      const options = { threshold: 0.15 };
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('show');
+          obs.unobserve(entry.target);
+        });
+      }, options);
+      faders.forEach(f => io.observe(f));
+    })();
+
+    // Form handling
+    const contactForm = document.getElementById('contactForm');
+    const toast = document.getElementById('toast');
+
+    // Helper: show a short toast
+    function showToast(text, time = 3000) {
+      toast.style.display = 'block';
+      toast.textContent = text;
+      setTimeout(() => { toast.style.display = 'none'; }, time);
+    }
+
+    // Send as email (mailto)
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // build email body
+      const to = 'info@ochivabeauty.com'; // <- replace with real email
+      const subject = encodeURIComponent(`Booking Request from ${name}`);
+      let body = `Name: ${name}%0APhone: ${phone}%0A`;
+      if (email) body += `Email: ${email}%0A`;
+      body += `Service: ${service}%0A`;
+      if (date) body += `Preferred date: ${date}%0A`;
+      if (message) body += `%0ADetails:%0A${encodeURIComponent(message)}`;
+
+      // open mail client
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      showToast('Opening your email client...');
+    });
+
+    // Send via WhatsApp
+    document.getElementById('sendWhatsBtn').addEventListener('click', function() {
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const service = encodeURIComponent(document.getElementById('service').value);
+      const date = encodeURIComponent(document.getElementById('date').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      if (!name || !phone || !service) {
+        showToast('Please fill: name, phone, and service before sending to WhatsApp.');
+        return;
+      }
+
+      // Replace this number with the business WhatsApp number (international format, no + or spaces)
+      const businessNumber = '2347059274114';
+
+      let text = `Hi Ochiva!%0AI'm ${name} (phone: ${phone})%0AService: ${service}`;
+      if (date) text += `%0APreferred date: ${date}`;
+      if (email) text += `%0AEmail: ${email}`;
+      if (message) text += `%0A%0ADetails:%0A${message}`;
+
+      const waLink = `https://wa.me/${businessNumber}?text=${text}`;
+      window.open(waLink, '_blank');
+    });
+  </script>
+</body>
+</html>
