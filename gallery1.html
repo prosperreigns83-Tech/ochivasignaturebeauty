@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochiva Signature Beauty - Gallery</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+    body{background:#fffafc;color:#333;}
+
+    header{background:linear-gradient(135deg,#ff69b4,#d63384);color:white;text-align:center;padding:20px;}
+    header h1{font-size:2rem;}
+    nav{margin-top:10px;}
+    nav a{color:white;text-decoration:none;margin:0 10px;font-weight:bold;}
+    nav a:hover{text-decoration:underline;}
+
+    .gallery{padding:40px 20px;}
+    .gallery h2{text-align:center;color:#d63384;margin-bottom:20px;font-size:1.8rem;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+    .grid img{width:100%;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.2);cursor:pointer;transition:transform 0.3s;}
+    .grid img:hover{transform:scale(1.05);}
+
+    /* Lightbox styling */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.4);
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer{background:#d63384;color:white;text-align:center;padding:15px;margin-top:30px;}
+    footer p{font-size:0.9rem;}
+
+    @media(max-width:768px){header h1{font-size:1.5rem;}.gallery h2{font-size:1.5rem;}}
+  
+    /* Add this to your CSS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#active{
+    color: white;
+    box-shadow: #50032a00;
+    border: 5px solid #d41273;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Ochiva Signature Beauty</h1>
+  <p>Where elegance meets perfection ✨</p>
+  <nav>
+    <a href="./landingpage.html">Home</a>
+    <a href="./aboutService.html">About</a>
+    <a href="serices" id="serices">Services</a>
+    <a href="" id="active">Gallery</a>
+    <a href="./contactNEW.html">Contact</a>
+     <a href="./product2.html">Product</a>
+     <a href="./product.html">Market</a>
+     
+  </nav>
+</header>
+
+
+  <section class="gallery">
+    <h2>Our Beautiful Works</h2>
+    <div class="grid" >
+      <a href="#img1"><img src="./image/IMG_2541.JPG" alt="Wig 1"></a>
+      <a href="#img2"><img src="./image/IMG_2541.JPG" alt="Wig 2"></a>
+      <a href="#img3"><img src="https://via.placeholder.com/500x500?text=Wig+3" alt="Wig 3"></a>
+      <a href="#img4"><img src="https://via.placeholder.com/500x500?text=Wig+4" alt="Wig 4"></a>
+      <a href="#img5"><img src="https://via.placeholder.com/500x500?text=Wig+5" alt="Wig 5"></a>
+      <a href="#img6"><img src="https://via.placeholder.com/500x500?text=Wig+6" alt="Wig 6"></a>
+    </div>
+  </section>
+
+  <!-- Lightbox Popups -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="./image/IMG_2541.JPG">
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://via.placeholder.com/800x800?text=Wig+2">
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://via.placeholder.com/800x800?text=Wig+3">
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://via.placeholder.com/800x800?text=Wig+4">
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://via.placeholder.com/800x800?text=Wig+5">
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="https://via.placeholder.com/800x800?text=Wig+6">
+  </div>
+
+  <footer>
+    <p>© 2025 Ochiva Signature Beauty | All Rights Reserved</p>
+  </footer>
+  <script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2 };
+  
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>
